@@ -20,12 +20,25 @@ class Hangman < Sinatra::Base
   post '/game_data' do
     word = params[:word]
     clue = params[:clue]
-    @game = Game.create(word, word.length, clue)
+    @game = Game.create(word.downcase, word.length, clue)
     redirect '/play'
   end
 
   get '/play' do
     erb :play
+  end
+
+  get '/game_over' do
+    erb :game_over
+  end
+
+  post '/guess' do
+    @game.guess(params[:character].downcase)
+    unless @game.finished?
+      redirect '/play'
+    else
+      redirect '/game_over'
+    end
   end
 
   # start the server if ruby file executed directly
