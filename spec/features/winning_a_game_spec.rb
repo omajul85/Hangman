@@ -6,7 +6,7 @@ feature 'Winning a Game:' do
 			set_game("cat", "Is a Pet")
 		end
 
-		scenario 'user guess the whole word' do
+		scenario 'user guesses the word' do
 			guess('c')
 			expect(page).to have_current_path('/play')
 			expect(page).to have_content 'Remaining attempts: 3'
@@ -18,6 +18,16 @@ feature 'Winning a Game:' do
 			guess('t')
 			expect(page).to have_current_path('/game_over')
 			expect(page).to have_content 'Congratulations, You won!'
+		end
+
+		scenario 'user restarts the game' do
+			guess 'c'
+			guess 'a'
+			guess 't'
+			expect(page).to have_current_path('/game_over')
+			expect(page).to have_content 'Congratulations, You won!'
+			restart
+			expect(page).to have_current_path('/')
 		end
 
 	end

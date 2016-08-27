@@ -10,3 +10,8 @@ def guess(char)
 	fill_in :character, with: char
 	click_button 'Guess'
 end
+
+def restart
+	visit('/game_over')
+	click_button 'Restart'
+end
