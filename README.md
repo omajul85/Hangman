@@ -5,7 +5,7 @@
 Task 
 ----
 
-Build a simple Hangman game in Sinatra.
+Build a simple Hangman game in Sinatra. The game uses the Hangman engine [gem](https://github.com/ammancilla/hangman_engine).
 
 Instructions
 ------------
@@ -18,7 +18,6 @@ $ bundle
 $ rackup
 ```
 Then, you can open your browser and visit `localhost:9292`.
-
 
 ## Testing
 
