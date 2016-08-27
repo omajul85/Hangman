@@ -1,10 +1,12 @@
-<p><strong>Clue: </strong><%= @game.clue %><p>
-<p><strong>Remaining attempts: </strong> <%= @game.remaining_attempts %></p>
-<h1 style="text-align: center;"><%= show_board(@game).upcase %></h1>
+<div class="game_area" class="pagination-centered">
+	<h3><strong>Clue: </strong><%= @game.clue %></h3>
+	<h3><strong>Remaining attempts: </strong> <%= @game.remaining_attempts %></h3>
+	<h1 style="text-align: center;"><%= show_board(@game).upcase %></h1>
+</div>
 <br>
-
 <form action="/guess" method="post">
 	<input type="text" name="character" placeholder="Type a single character..." /><br>
 	<br>
   <input class="btn btn-warning" type="submit" value="Guess">
 </form>
+

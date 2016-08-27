@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(119, 164, 221);
+  background-image: url(/images/rope_pattern.jpg);
   margin: 0;
   padding: 0;
 }
@@ -45,7 +45,17 @@ footer {
   position:relative;
 }
 
+.game_area {
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 2px;
+}
+
 input {
   margin-bottom: 5px;
   width: 300px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 2px;
 }

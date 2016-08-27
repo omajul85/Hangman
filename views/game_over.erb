@@ -1,9 +1,11 @@
-<% if @game.solved? %>
-	<h1>Congratulations, You won!</h1>
-<% else %>
-	<h1>Boooo, You lose!</h1>
-	<p>The word was <strong><%= @game.word %></strong></p>
-<% end %>
+<div class="game_area">
+	<% if @game.solved? %>
+		<h1>Congratulations, You won!</h1>
+	<% else %>
+		<h1>Boooo, You lose!</h1>
+		<p>The word was <strong><%= @game.word %></strong></p>
+	<% end %>
+</div>
 
 <br>
 
