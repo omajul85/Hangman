@@ -1,5 +1,5 @@
-<h1>Hangman</h1><hr>
-<h3>Clue: <%= @game.clue %></h3>
+<p><strong>Clue: </strong><%= @game.clue %><p>
+<p><strong>Remaining attempts: </strong> <%= @game.remaining_attempts %></p>
 <h1 style="text-align: center;"><%= show_board(@game) %></h1>
 
 <!-- <form action="/attack">
